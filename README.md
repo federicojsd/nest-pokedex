@@ -15,12 +15,21 @@ npm i
 npm i -g @nestjs/cli
 ```
 
-4. Levantar la base de datos
+4. Clonar __.env.template__ y renombrarlo __.env__
+
+5. Llenar las variables en el nuevo __.env__
+
+6. Ejecutar la aplicacion en dev
+```
+npm run start:dev
+```
+
+7. Levantar la base de datos
 ```
 docker-compose up -d
 ```
 
-5. Cargar datos
+8. Cargar datos
 ```
 http://localhost:3000/api/v2/seed
 ```
