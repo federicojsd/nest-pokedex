@@ -25,7 +25,7 @@ export class PokemonService {
     private readonly configService: ConfigService,
   ) {
 
-    this.defaultLimit = configService.get<number>('defaultLimit');
+    // this.defaultLimit = configService.get<number>('defaultLimit');
   }
 
   async create(createPokemonDto: CreatePokemonDto) {
@@ -39,7 +39,7 @@ export class PokemonService {
   }
 
   findAll(paginationDto: PaginationDto) {
-    const { limit = this.defaultLimit, offset = 0 } = paginationDto;
+    const { limit = 0, offset = 0 } = paginationDto;
     return this.pokemonModel
       .find()
       .limit(limit)

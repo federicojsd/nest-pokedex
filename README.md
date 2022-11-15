@@ -34,6 +34,18 @@ docker-compose up -d
 http://localhost:3000/api/v2/seed
 ```
 
+## Build de produccion
+1. Crear archivo __.env.prod__
+2. Llenar las variables de entorno
+3. Crear la nueva imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Para correrlo luego del build
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
 ## Notas
 Heroku redeply sin cambios
 ```
