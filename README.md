@@ -34,6 +34,13 @@ docker-compose up -d
 http://localhost:3000/api/v2/seed
 ```
 
+## Notas
+Heroku redeply sin cambios
+```
+git commit --allow-empty -m "Trigger Heroku deply"
+git push heroku master
+```
+
 ## Stack usado
 * MongoDB
 * Nest
